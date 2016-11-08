@@ -1,7 +1,7 @@
 let exchangeRates = {
     eur: 1,
-    lvl: 0.69,
-    usd: 1.11
+    usd: 1.11,
+    lvl: 0.69    
 }
 
 let usdToLvl = usd => {
@@ -13,8 +13,20 @@ let usdToLvl = usd => {
     // vai ari | usd / exchangeRates.usd * exchangeRates.lvl
 }
 
-let usdToLvl2 = function(usd) {
-  return usd / exchangeRates.usd * exchangeRates.lvl
+//let usdToLvl2 = function(usd) {
+//  return usd / exchangeRates.usd * exchangeRates.lvl
+//}
+
+let lvl = usdToLvl(1)
+
+//--------------------------------------------
+
+let lvlToUsd = lvl => {
+
+    let eur = lvl / exchangeRates.lvl
+
+    let usd = eur * exchangeRates.usd
+    return usd    
 }
 
-let lvl = usdToLvl(10)
+let usd = lvlToUsd(1)
