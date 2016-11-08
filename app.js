@@ -17,10 +17,6 @@ let usdToLvl = usd => {
 //  return usd / exchangeRates.usd * exchangeRates.lvl
 //}
 
-let lvl = usdToLvl(1)
-
-//--------------------------------------------
-
 let lvlToUsd = lvl => {
 
     let eur = lvl / exchangeRates.lvl
@@ -29,4 +25,8 @@ let lvlToUsd = lvl => {
     return usd    
 }
 
+//--------------------------------------------
+
+let lvl = usdToLvl(1)
 let usd = lvlToUsd(1)
+
